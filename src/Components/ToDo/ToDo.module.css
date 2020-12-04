@@ -1,0 +1,110 @@
+@import '~antd/dist/antd.css';
+
+.numberToDo {
+
+}
+
+.delete {
+    float:right;
+    cursor: pointer;
+    display: none;
+    margin-right: 15px;
+}
+
+.item:hover .delete {
+    margin-top: 5px;
+    display: block;
+}
+
+.marginTop {
+    margin-top:150px;
+}
+
+.item {
+
+    padding: 10px;
+    cursor: auto;
+}
+
+.item:hover {
+    background-color: #bfbfbf;
+}
+
+.radioFalse {
+    width: 20px;
+    margin: 3px;
+    height: 20px;
+    border:solid 1px black;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.radioTrue {
+    width: 20px;
+    height: 20px;
+    border:solid 1px gold;
+    margin: 3px;
+    cursor: pointer;
+    border-radius: 30px;
+}
+
+.textFalse {
+    text-decoration: line-through;
+    opacity: 0.4;
+}
+
+.DeleteAll {
+    position: absolute;
+    right: 10px;
+    top:340px;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+.MainBlock {
+    position: relative;
+}
+
+.SaveAll {
+    position: absolute;
+    top: 340px;
+    left:10px;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+.PreloaderBlock {
+    position: relative;
+}
+
+.preloader {
+    position: absolute;
+    left: 260px;
+    top: 150px;
+}
+
+.MainBlockHiden {
+    display: none;
+}
+
+.mainPopup {
+    position: relative;
+}
+
+.popup {
+    position: absolute;
+    left: 30px;
+    top:150px;
+}
+
+.info {
+    font-size: 20px;
+    text-align: center;
+}
+
+.UpdateAll {
+    font-size: 32px;
+    margin-top:30px;
+    margin-left: 230px;
+}
+

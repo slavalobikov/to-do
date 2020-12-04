@@ -1,0 +1,44 @@
+.app {
+    background-color: wheat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border:1px solid #ebebeb;
+
+}
+
+.main {
+    background-color: #f4f6f8;
+    width: 600px;
+    height: 500px;
+    box-shadow: 0 9px 24px rgba(0, 0, 0, 0.01), 0 25px 40px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.logo {
+    background-color: orangered;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding-left: 40px;
+}
+
+.logo > span {
+    color:#fafafa;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: none;
+}
+
+* {
+    outline: none;
+}
+
+
+
+

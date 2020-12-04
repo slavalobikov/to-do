@@ -1,0 +1,36 @@
+.addField {
+    display:flex;
+}
+
+.addField > input {
+    border: 0;
+    font-size: 16px;
+    padding: 20px;
+    flex:1;
+
+}
+
+.addBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    background-color: transparent;
+    width: 65px;
+    height: 65px;
+    cursor: pointer;
+
+
+}
+
+.addBtn:hover {
+    background-color: #fbfbfb;
+}
+
+.addField > input::placeholder {
+    color:#bfbfbf;
+}
+
+.MainBlockHiden {
+    display: none;
+}
