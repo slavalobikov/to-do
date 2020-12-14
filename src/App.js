@@ -12,7 +12,10 @@ function App() {
               <InputToDo />
               <ToDo />
           </div>
+
       </div>
+
+
   );
 }
 

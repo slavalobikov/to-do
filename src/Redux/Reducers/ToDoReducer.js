@@ -5,23 +5,8 @@ const EDIT_TODO = 'EDIT_TODO';
 
 let initialState = {
     z : [
-/*        {
-            id:0,
-            isCheck: false,
-            text:'Дороу',
-            isDone: false,
-            isEdit:false,
 
-        },
-        {
-            id:1,
-            isCheck: true,
-            text: 'выучил',
-            isDone: true,
-            isEdit:false,
-        }*/
     ],
-    isMargin: true,
 }
 
 const ToDoReducer =(state = initialState, action) => {

@@ -7,7 +7,6 @@ import {AddZ} from "../../Redux/Reducers/ToDoReducer";
 
 
 const InputToDo = (props) => {
-
     const [value, setValue] = useState('');
 
     let IdNewMessage;
@@ -36,6 +35,10 @@ const InputToDo = (props) => {
                            value={value}
                            onChange={(e) => {setValue(e.currentTarget.value)}}
                            placeholder={'Введите свою задачу'}
+                           onKeyDown={(e) => { if (e.keyCode === 13) {
+                                   addToDo()
+                               }}
+                           }
 
                     />
                     <button onClick={() => {addToDo()}}  className={s.addBtn}>+</button>

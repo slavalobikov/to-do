@@ -1,7 +1,12 @@
 @import '~antd/dist/antd.css';
 
-.numberToDo {
 
+.leha {
+    display: flex;
+    align-items: center;
+}
+.Main {
+    margin-left:5px;
 }
 
 .delete {
@@ -21,7 +26,8 @@
 }
 
 .item {
-
+    display: flex;
+    justify-content: space-between;
     padding: 10px;
     cursor: auto;
 }
@@ -63,6 +69,7 @@
 
 .MainBlock {
     position: relative;
+
 }
 
 .SaveAll {
