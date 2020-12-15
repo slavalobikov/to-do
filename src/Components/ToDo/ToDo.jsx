@@ -16,7 +16,7 @@ const ToDo = (props) => {
 
     const editToDoMessage = (id, isEditValueF, isEditF, td) => {
         if (!isEditValue && td === '' ) {
-            return
+            props.DeleteToDO(id)
         }
 
         props.EditToDO(id, isEditValueF, isEditF);
@@ -32,8 +32,10 @@ const ToDo = (props) => {
             <div className={s.item}>
                 <div className={s.leha}>
                     {td.isDone
-                        ? <button onClick={() => {props.TooggleIsDoneTrue(td.id, td.isDone)}} className={s.radioTrue} ></button>
-                        : <button onClick={() => {props.TooggleIsDoneTrue(td.id, td.isDone)}} className={s.radioFalse}></button>}
+                        ? <button onClick={() =>
+                        {props.TooggleIsDoneTrue(td.id, td.isDone)}} className={s.radioTrue} ></button>
+                        : <button onClick={() =>
+                        {props.TooggleIsDoneTrue(td.id, td.isDone)}} className={s.radioFalse}></button>}
                     <span className={cn(s.Main, {
                         [s.textFalse]: td.isDone === true
                     })}>
@@ -41,6 +43,10 @@ const ToDo = (props) => {
                     && <input type="text"
                               onBlur={() => { editToDoMessage(td.id, isEditValue, td.isEdit, td.text)}}
                               onChange={(e) => {setIsEdit(e.currentTarget.value)}}
+                              onKeyDown={(e) => {
+                                  if (e.keyCode === 13 || e.keyCode === 27 ) {
+                                      editToDoMessage(td.id, isEditValue, td.isEdit, td.text)
+                              }}}
                               value={td.text || isEditValue} autoFocus={true}
                     />}
                         {!td.isEdit && <span>{td.text}</span>}
@@ -49,9 +55,11 @@ const ToDo = (props) => {
                 </div>
 
                 <div className={s.btnHover}>
-                    <span onClick={() => { props.DeleteToDO(td.id)}} className={s.delete}><DeleteOutlined /></span>
+                    <span onClick={() => { props.DeleteToDO(td.id)}}
+                          className={s.delete}><DeleteOutlined /></span>
+                    {!td.isEdit &&
                     <span onClick={() => { editToDoMessage(td.id, isEditValue, td.isEdit, td.text)} }
-                          className={s.delete}><FormOutlined /></span>
+                          className={s.delete}><FormOutlined /></span>}
                 </div>
 
             </div>
